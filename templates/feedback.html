@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="d-flex h-100 align-items-center text-center">
+   <div class="container">
+    <img src="static/images/eye.png" class="mb-5" alt="Site Logo"/>
+     <h1>FEEDBACK</h1>
+     {% if result == 1 %}
+     <div class="alert alert-success" role="alert">
+      From our diagnosis, we think you eye(s) are healthy.
+    </div>
+    <a href="/" class="btn btn-primary">Go Home</a>
+    {% elif result == 0 %}
+    <div class="alert alert-danger" role="alert">
+      From our diagnosis, we think you eye(s) have cataracts.
+    </div>
+    <a href="/" class="btn btn-primary">Go Home</a>
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+      We were not able to make a diagnosis. <a href="/">Please try again</a>.
+    </div>
+    {% endif %}
+   </div>
+ </div>
+ {% endblock %}>
