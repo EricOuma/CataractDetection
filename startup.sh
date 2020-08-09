@@ -1,0 +1,1 @@
+sudo apt install libsm6 libxrender1 libfontconfig1 libice6
